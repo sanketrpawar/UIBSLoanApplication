@@ -1,5 +1,7 @@
 package com.crm.main.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +25,12 @@ public class CustomerApplicationServiceImpl implements CustomerApplicationServic
 	public void saveCustomerDetails(CustomerDetails customerDetails) {
 		applicationRepository.save(customerDetails);
 		
+	}
+	@Override
+	public CustomerApplicationForm getCustomerApplication(Long applicationNo ) {
+		
+		List<CustomerApplicationForm > al =applicationRepository.findAll();
+		return (CustomerApplicationForm) al;
 	}
 
 }

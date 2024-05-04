@@ -3,6 +3,8 @@ package com.crm.main.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -66,5 +68,28 @@ public class CustomerApplicationController {
 					.body("Failed to save customer details: " + e.getMessage());
 		}
 	}
-
+	
+	
+	//Retrieve data through id
+	@GetMapping("/FormData/{formId}")
+    public ResponseEntity<CustomerApplicationForm> getCustomerApplicationForm(@PathVariable Long applicationNo) {
+        try {
+            // Retrieve customer application form from the service layer based on formId
+            CustomerApplicationForm customerApplicationForm = customerApplicationServiceI.getCustomerApplication(applicationNo);
+            if (customerApplicationForm != null) {
+                return ResponseEntity.ok(customerApplicationForm);
+            } else {
+                return ResponseEntity.notFound().build();
+            }
+        } catch (Exception e) {
+            log.error("Failed to fetch customer application form", e);
+            return (ResponseEntity<CustomerApplicationForm>) ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR);
+                   
+        }
+    }
 }
+	
+	
+	
+
+

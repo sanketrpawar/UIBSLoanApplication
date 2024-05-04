@@ -13,4 +13,8 @@ public interface CustomerApplicationServiceI  {
 
 	public void saveCustomerDetails(CustomerDetails customerDetails);
 
+
+
+	public CustomerApplicationForm getCustomerApplication(Long formId);
+
 }
