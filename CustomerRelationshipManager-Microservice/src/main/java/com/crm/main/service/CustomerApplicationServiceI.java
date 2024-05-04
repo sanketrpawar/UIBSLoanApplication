@@ -15,6 +15,6 @@ public interface CustomerApplicationServiceI  {
 
 
 
-	public CustomerApplicationForm getCustomerApplication(Long formId);
+	public CustomerApplicationForm getCustomerApplication(Long applicationNo );
 
 }
