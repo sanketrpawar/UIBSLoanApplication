@@ -22,9 +22,9 @@ public class PropertyDetails
 	private String  constructionArea;	
 	private double  propertyPrice;
 	private double  constructionPrice;
-	@OneToOne(cascade = CascadeType.ALL)
+//	@OneToOne(cascade = CascadeType.ALL)
 //	@OneToOne(cascade = CascadeType.ALL,mappedBy = "PropertyDetails")
-	private Propertyaddress propertyadress;
+//	private Propertyaddress propertyadress;
 	
 
 }

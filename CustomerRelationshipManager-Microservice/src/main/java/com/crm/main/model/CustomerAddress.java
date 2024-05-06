@@ -23,14 +23,13 @@ import lombok.NoArgsConstructor;
 		private long customerAddressId;
 		
 		
-		@OneToOne(cascade = CascadeType.ALL)
-		@JoinColumn(name = "permanent_address_id")
-		private permanentAddress permanentaddress;
+//		@OneToOne(cascade = CascadeType.ALL)
+//		@JoinColumn(name = "permanent_address_id")
+//		private permanentAddress permanentaddress;
 //		@OneToOne(cascade = CascadeType.ALL ,mappedBy = "CustomerAddress")	
-	
-		@OneToOne(cascade = CascadeType.ALL)
-		@JoinColumn(name = "local_address_id")
-		private localAddress localaddress;
-		
+//	
+//		@OneToOne(cascade = CascadeType.ALL)
+//		@JoinColumn(name = "local_address_id")
+//		private localAddress localaddress;	
 //		@OneToOne(cascade = CascadeType.ALL,mappedBy = "CustomerAddress"
 	}

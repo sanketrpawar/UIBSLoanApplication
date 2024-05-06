@@ -24,9 +24,6 @@ private int applicationNo ;
 private CustomerDetails customerDetails;
 
 @OneToOne(cascade = CascadeType.ALL)
-private DependentDetails dependentDetails;
-
-@OneToOne(cascade = CascadeType.ALL)
 
 private CustomerAddress customerAddress;
 
@@ -44,9 +41,6 @@ private CustomerAccountDetails customeraccountDetails;
 
 @OneToOne(cascade = CascadeType.ALL)
 private PreviousLoan previousLoan;
-
-@OneToOne(cascade = CascadeType.ALL)
-private GuarantorDetails guarantorDetails;
 
 @OneToOne(cascade = CascadeType.ALL)
 private PropertyDetails propertyDetails;

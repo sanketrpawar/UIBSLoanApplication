@@ -14,17 +14,19 @@ import lombok.NoArgsConstructor;
 @Entity
 public class PreviousLoan 
 {
-	@Id
-private  long loanId;
-private double previousLoanAmount;
-private double paidAmount;
-private double remainingAmount;
-private int defaulterCount;
-private String loanStatus;
-private String remark;
-@OneToOne(cascade = CascadeType.ALL)
-//@OneToOne(cascade = CascadeType.ALL,mappedBy = "PreviousLoan")
-private Previousloanbankdetails previousloanbankdetails;
 
+	@Id
+	private  long loanId;
+	private double previousLoanAmount;
+	private double paidAmount;
+	private double remainingAmount;
+	private int defaulterCount;
+	private String loanStatus;
+	private String remark;
+
+	//@OneToOne(cascade = CascadeType.ALL,mappedBy = "PreviousLoan")
+	
 
 }
+
+
