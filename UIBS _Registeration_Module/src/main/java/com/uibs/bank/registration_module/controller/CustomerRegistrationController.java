@@ -55,7 +55,7 @@ public class CustomerRegistrationController {
 			return new ResponseEntity<String>("Logged in successfully", HttpStatus.ACCEPTED);
 		} else {
 			return new ResponseEntity<String>("Enter Valid Credentials", HttpStatus.NOT_FOUND);
-			//aaaa
+
 		}
 	}
 
