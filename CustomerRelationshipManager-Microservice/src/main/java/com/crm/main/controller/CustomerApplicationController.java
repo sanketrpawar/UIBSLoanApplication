@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -32,9 +33,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.extern.slf4j.Slf4j;
 
+@CrossOrigin("http://localhost:4200")
 @RestController
 @Slf4j
-@RequestMapping("/customerApplicationform")
+//@RequestMapping("/customerApplicationform")
 public class CustomerApplicationController {
 
 	@Autowired
@@ -76,13 +78,14 @@ public class CustomerApplicationController {
 	@PostMapping("/customerProfession")
 	public ResponseEntity<String> setProfession(@RequestPart("professionsalarySlips") MultipartFile file1,
 			@RequestPart("Professiondata") String json1) throws IOException {
-		Profession profession = new Profession();
-		profession.setProfessionsalartSlips(file1.getBytes());
+//		Profession profession = new Profession();
+//		profession.setProfessionsalartSlips(file1.getBytes());
 
 		// Deserialize
-		profession = objectMapper.readValue(json1, Profession.class);
+		Profession p = objectMapper.readValue(json1, Profession.class);
+		p.setProfessionsalartSlips(file1.getBytes());
 		// savetoDatabase
-		customerApplicationServiceI.saveProfession(profession);
+		customerApplicationServiceI.saveProfession(p);
 		return new ResponseEntity<String>("Saved Profession", HttpStatus.OK);
 	}
 
@@ -93,14 +96,16 @@ public class CustomerApplicationController {
 			@RequestPart("propertyInsurance") MultipartFile file3, @RequestPart("Mortgagedata") String json2)
 			throws IOException {
 
-		Mortgage mortgage = new Mortgage();
-		mortgage.setProfertyProof(file2.getBytes());
-		mortgage.setPropertyInsurance(file3.getBytes());
+//		Mortgage mortgage = new Mortgage();
+//		mortgage.setProfertyProof(file2.getBytes());
+//		mortgage.setPropertyInsurance(file3.getBytes());
 
 		// Deserialize
-		mortgage = objectMapper.readValue(json2, Mortgage.class);
+		Mortgage m = objectMapper.readValue(json2, Mortgage.class);
+		m.setProfertyProof(file2.getBytes());
+		m.setPropertyInsurance(file3.getBytes());
 		// savetoDatabase
-		customerApplicationServiceI.saveMortgage(mortgage);
+		customerApplicationServiceI.saveMortgage(m);
 
 		return new ResponseEntity<String>("Saved Mortgage", HttpStatus.OK);
 
@@ -145,7 +150,11 @@ public class CustomerApplicationController {
 			@RequestPart("bankCheque") MultipartFile file11, @RequestPart("bankStatement") MultipartFile file12,
 			@RequestPart("personalData") String json3) throws IOException {
 
-		AllPersonalDocs allPersonalDocs = new AllPersonalDocs();
+//		AllPersonalDocs allPersonalDocs = new AllPersonalDocs();
+		
+
+		// Deserialize
+		AllPersonalDocs allPersonalDocs = objectMapper.readValue(json3, AllPersonalDocs.class);
 		allPersonalDocs.setAddressProof(file4.getBytes());
 		allPersonalDocs.setPanCard(file5.getBytes());
 		allPersonalDocs.setAadharCard(file6.getBytes());
@@ -155,9 +164,6 @@ public class CustomerApplicationController {
 		allPersonalDocs.setThumb(file10.getBytes());
 		allPersonalDocs.setBankCheque(file11.getBytes());
 		allPersonalDocs.setBankStatement(file12.getBytes());
-
-		// Deserialize
-		allPersonalDocs = objectMapper.readValue(json3, AllPersonalDocs.class);
 
 		// savetoDatabase
 		customerApplicationServiceI.saveAllPersonalDocs(allPersonalDocs);

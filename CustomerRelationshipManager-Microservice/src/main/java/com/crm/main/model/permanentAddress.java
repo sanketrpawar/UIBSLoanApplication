@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 public class permanentAddress 
 {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int permanentId;
 	private String areaName;
 	private String cityName;

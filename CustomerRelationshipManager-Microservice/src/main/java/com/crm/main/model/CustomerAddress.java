@@ -19,9 +19,15 @@ import lombok.NoArgsConstructor;
 	public class CustomerAddress 
 	{
 		@Id
-		@GeneratedValue(strategy = GenerationType.AUTO)
+		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private long customerAddressId;
-		
+		private String areaName;
+		private String cityName;
+		private String district;
+		private String state;
+		private String pinCode;
+		private String houseNo;
+		private String streetName;
 		
 //		@OneToOne(cascade = CascadeType.ALL)
 //		@JoinColumn(name = "permanent_address_id")

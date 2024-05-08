@@ -2,6 +2,8 @@ package com.crm.main.model;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
@@ -16,6 +18,7 @@ public class PreviousLoan
 {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private  long loanId;
 	private double previousLoanAmount;
 	private double paidAmount;

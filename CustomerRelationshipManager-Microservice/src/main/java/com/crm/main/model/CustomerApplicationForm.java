@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 public class CustomerApplicationForm 
 {
 @Id
-@GeneratedValue(strategy = GenerationType.AUTO)
+@GeneratedValue(strategy = GenerationType.IDENTITY)
 private int applicationNo ;
 
 @OneToOne(cascade = CascadeType.ALL)

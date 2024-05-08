@@ -20,7 +20,7 @@ public class CustomerDetails
 {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long customerId;
 	
 	private String customerName;
@@ -31,7 +31,7 @@ public class CustomerDetails
 	
 	private long adharNo;
 	
-	private long pancardNo;
+	private String pancardNo;
 	
 	private String gender;
 	
@@ -41,7 +41,7 @@ public class CustomerDetails
 	
 	private String loanType;
 	
-	private String martialStatus;
+	private String maritalStatus;
 	
 	private String statusCode;
 	
