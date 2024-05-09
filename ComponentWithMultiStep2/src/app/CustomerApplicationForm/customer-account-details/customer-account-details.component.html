@@ -1,0 +1,47 @@
+<body>
+  <div class="container-fluid px-1 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+     <div class="col-xl-11 col-lg-8 col-md-9 col-3 text-center">
+      <div class="card">
+<form class="form-card" [formGroup]="customerAccountDetails" (ngSubmit)="onSubmit()">
+<h1 class="text-center mb-10">Fill out your Account details</h1>
+
+<div class="form-group row justify-content-between text-left">
+      <div class="col-sm-4 flex-column d-flex">
+            
+              <mat-label class="form-control-label px-3">Enter Your account type <span class="text-danger"> *</span></mat-label>
+              <input matInput formControlName="accounType" placeholder="Enter your account type" required>
+           
+      </div>
+          
+      <div class="col-sm-4 flex-column d-flex">
+           
+              <label class="form-control-label px-3">Enter your account holder name <span class="text-danger"> *</span></label>
+              <input matInput formControlName="accountHolderName" placeholder="Enter account holder name" required>
+            
+      </div>
+      
+      <div class="col-sm-4 flex-column d-flex">
+           
+              <label class="form-control-label px-3">Enter your account status <span class="text-danger"> *</span></label>
+              <input matInput formControlName="accountStatus" placeholder="enter your account status" required>
+            
+      </div>
+
+</div>
+<div class="form-group row justify-content-center text-left">
+
+  <div class="col-sm-4 flex-column d-flex">
+
+    <label>Enter your account No.</label>
+    <input matInput formControlName="accountNo" placeholder="enter your account No" required>
+  
+  </div>
+  </div>
+            
+          
+      <div class="form-group">
+          <button mat-button matStepperPrevious class="btn-block btn-primary" color="primary">Back</button>
+          <button mat-raised-button matStepperNext class="btn-block btn-primary" color="primary">Next</button>
+      </div>
+    </form>

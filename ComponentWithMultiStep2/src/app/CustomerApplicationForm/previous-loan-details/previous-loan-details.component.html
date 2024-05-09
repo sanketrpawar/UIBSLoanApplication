@@ -1,0 +1,60 @@
+<body>
+  <div class="container-fluid px-1 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+     <div class="col-xl-11 col-lg-8 col-md-9 col-3 text-center">
+      <div class="card">
+<form class="form-card" [formGroup]="previousLoan" (ngSubmit)="onSubmit()">
+<h1 class="text-center mb-10">Previous Loan Amount</h1>
+      
+      <div class="form-group row justify-content-between text-left">
+        <div class="col-sm-4 flex-column d-flex">
+          
+              <label class="form-control-label px-3">Enter Your previous Loan Amount  <span class="text-danger"> *</span></label>
+              <input matInput formControlName="previousLoanAmount" placeholder="Enter your previous Loan Amount">
+           
+        </div>
+        <div class="col-sm-4 flex-column d-flex">  
+          
+              <label class="form-control-label px-3">Enter your Paid Amount <span class="text-danger"> *</span></label>
+              <input matInput formControlName="paidAmount" placeholder="Enter your paid Amount">
+           
+        </div>
+        <div class="col-sm-4 flex-column d-flex">  
+           
+              <label class="form-control-label px-3">Enter your remaining Amount <span class="text-danger"> *</span></label>
+              <input matInput formControlName="remainingAmount" placeholder="enter your remainingAmount">
+            
+        </div> 
+      </div>
+      
+      <div class="form-group row justify-content-between text-left">
+        <div class="col-sm-4 flex-column d-flex">
+           
+              <label class="form-control-label px-3">Enter your defaulter Count <span class="text-danger"> *</span></label>
+              <input matInput formControlName="defaulterCount" placeholder="enter your defaulter Count">
+            
+        </div>
+          
+        <div class="col-sm-4 flex-column d-flex">
+            
+              <label class="form-control-label px-3">Enter your loan Status <span class="text-danger"> *</span></label>
+              <input matInput formControlName="loanStatus" placeholder="enter your loan Status">
+           
+        </div>
+        <div class="col-sm-4 flex-column d-flex">
+          
+              <label class="form-control-label px-3">Enter your remark <span class="text-danger"> *</span></label>
+              <input matInput formControlName="remark" placeholder="enter your remark">
+          
+        </div> 
+      </div>    
+      <div>
+          <button mat-button matStepperPrevious class="btn-block btn-primary" color="primary">Back</button>
+          <button mat-raised-button matStepperNext class="btn-block btn-primary" color="primary">Next</button>
+      </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>

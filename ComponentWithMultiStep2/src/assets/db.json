@@ -1,0 +1,116 @@
+{
+  "customerDetails": [
+    {
+      "id": "a901",
+      "customerName": "Shreyas Nimje",
+      "customerMobileno": "73289392",
+      "customerEmailId": "aidsfi",
+      "adharNo": "239932324",
+      "pancardNo": "fsdda2323",
+      "gender": "kfakl",
+      "customerDOB": "jkadskjf",
+      "customerAge": "22",
+      "maritalStatus": "dsaf",
+      "statusCode": "3jdsf",
+      "totalLoanRequired": "893889343",
+      "cibilScore": "3323"
+    },
+    {
+      "id": "e2fd",
+      "customerName": "Shreyas Nimje",
+      "customerMobileno": "7020576196",
+      "customerEmailId": "shreyasnimejth@gmail.com",
+      "adharNo": "733591518202",
+      "pancardNo": "COUPN3891Q",
+      "gender": "Male",
+      "customerDOB": "30/05/2001",
+      "customerAge": "22",
+      "maritalStatus": "Single",
+      "statusCode": "Active",
+      "totalLoanRequired": "20002011202120",
+      "cibilScore": "992"
+    }
+  ],
+  "customerAddress": [
+    {
+      "id": "0e2c",
+      "areaName": "kldksf",
+      "cityName": "fafdsa",
+      "district": "afsdf",
+      "state": "sf",
+      "pinCode": "sdf",
+      "houseNo": "dsdfs",
+      "streetName": "sd"
+    },
+    {
+      "id": "d2d1",
+      "areaName": "Dubey Nagar",
+      "cityName": "Nagpur",
+      "district": "Nagpur",
+      "state": "Maharashtra",
+      "pinCode": "440034",
+      "houseNo": "84/C",
+      "streetName": "Hudkeshwar Road"
+    }
+  ],
+  "customerEducation": [
+    {
+      "id": "526e",
+      "educationalSpecialization": "Computer Engineering",
+      "passingYear": "2023",
+      "qualification": "B.E."
+    }
+  ],
+  "professionDetails": [
+    {
+      "id": "ea51",
+      "professionType": "IT Industry",
+      "professionSalary": "1000000",
+      "professionSalaryType": "Employed",
+      "professionWorkingPeriod": "2",
+      "professionDesignation": "Seinor Software Developer"
+    }
+  ],
+  "mortgageDetails": [
+    {
+      "id": "63b3",
+      "propertyValue": "82389429390",
+      "propertyType": "Private Land",
+      "loanOnProperty": "209302"
+    }
+  ],
+  "customerAccountDetails": [
+    {
+      "id": "e403",
+      "accounType": "Saving",
+      "accountHolderName": "Shreyas Nimje",
+      "accountStatus": "Active",
+      "accountNo": "30039403"
+    }
+  ],
+  "previousLoanDetails": [
+    {
+      "id": "4852",
+      "previousLoanAmount": "992893",
+      "paidAmount": "992000",
+      "remainingAmount": "893",
+      "defaulterCount": "921",
+      "loanStatus": "Active",
+      "remark": "wjsksd"
+    }
+  ],
+  "propertyDetails": [
+    {
+      "id": "d1b2",
+      "propertyType": null,
+      "propertyArea": "Dubey Nagar",
+      "constructionArea": "Dubey Nagar",
+      "propertyPrice": "8293892892",
+      "constructionPrice": "239928",
+      "propertyAddress": "Dubey Nagar"
+    }
+  ],
+  "allDocuments":[
+    
+  ]
+}
