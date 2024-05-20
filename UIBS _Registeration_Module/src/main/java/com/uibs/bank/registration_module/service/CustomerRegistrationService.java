@@ -13,5 +13,7 @@ public interface CustomerRegistrationService {
 
 	public Customer loginCustomer(String username, String password);
 
+	public Customer getCustomer(int id);
+
 
 }

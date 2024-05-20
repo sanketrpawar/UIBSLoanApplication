@@ -27,7 +27,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RestController
 @RequestMapping("/uibs")
-@CrossOrigin(origins = "http://localhost:63845")
+@CrossOrigin(origins = "http://localhost:4200")
 public class EnquiryController {
 
 	@Autowired
@@ -43,13 +43,13 @@ public class EnquiryController {
 	private String fromMail;
 
 	@PostMapping(value="/saveEnquiry", consumes={MediaType.APPLICATION_JSON_VALUE})
-	public ResponseEntity<Enquiry> postEnquiry(@Valid @RequestBody Enquiry enquiry, Email email) {
+	public ResponseEntity<Enquiry> postEnquiry(@Valid @RequestBody Enquiry enquiry) {
 
 		log.info("executing postEnquiry method in EnquiryController");
 
 		try {
 			log.info("inside try block of postEnquiry method in EnquiryController");
-
+       Email email=new Email();
 			email.setFromEmail(fromMail);
 			System.out.println(email.getFromEmail());
 			Enquiry saveEnquiry = enquiryService.saveEnquiry(enquiry);
@@ -86,4 +86,6 @@ public class EnquiryController {
 		log.info("successfully executed method of EnquiryController");
 		return new ResponseEntity<Enquiry>(enquiry, HttpStatus.OK);
 	}
+	
+	
 }

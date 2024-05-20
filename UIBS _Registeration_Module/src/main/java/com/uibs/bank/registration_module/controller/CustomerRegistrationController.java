@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.uibs.bank.registration_module.model.Customer;
 import com.uibs.bank.registration_module.model.Email;
+import com.uibs.bank.registration_module.model.SuccessMsg;
 import com.uibs.bank.registration_module.service.CustomerRegistrationService;
 import com.uibs.bank.registration_module.utility.CustomerRegistrationUtility;
 
@@ -16,7 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RestController
 @RequestMapping("/uibs")
-@CrossOrigin(origins = "http://localhost:60928")
+@CrossOrigin
 public class CustomerRegistrationController {
 
 	@Autowired
@@ -46,17 +47,27 @@ public class CustomerRegistrationController {
 
 	}
 
-	@GetMapping("/login_customer")
-	public ResponseEntity<String> loginCustomer(@RequestParam String username, @RequestParam String password) {
+	@PostMapping("/login_customer")
+	public ResponseEntity<Customer> loginCustomer(@RequestParam String username, @RequestParam String password) {
 
 		Customer loginCustomer = customerRegistrationService.loginCustomer(username, password);
+		
+		SuccessMsg msg = new SuccessMsg();
+		
+		msg.setId(loginCustomer.getId());
+		msg.setMsg("Logged in");
 
 		if (loginCustomer.getUsername().equals(username) && loginCustomer.getPassword().equals(password)) {
-			return new ResponseEntity<String>("Logged in successfully", HttpStatus.ACCEPTED);
+			return new ResponseEntity<Customer>(loginCustomer, HttpStatus.ACCEPTED);
 		} else {
-			return new ResponseEntity<String>("Enter Valid Credentials", HttpStatus.NOT_FOUND);
-			//aaa
+			return new ResponseEntity<Customer>(loginCustomer, HttpStatus.NOT_FOUND);
 		}
 	}
-
+	
+	@GetMapping("/get_login_user/{id}")
+	public ResponseEntity<Customer> getCustomer(@PathVariable int id){
+		
+		Customer customer = customerRegistrationService.getCustomer(id);
+		return new ResponseEntity<Customer>(customer, HttpStatus.OK);
+	}
 }

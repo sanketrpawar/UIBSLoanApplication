@@ -46,7 +46,6 @@ public class EnquiryEmailUtility {
 		sender.send(m);
 		
 		log.info("Successfully executed sendSimpleMail method of EnquiryEmailUtility. Email sent to the user.");
-		System.out.println("MAIL SENT");
-		
+		System.out.println("MAIL SENT");	
 	}
 }

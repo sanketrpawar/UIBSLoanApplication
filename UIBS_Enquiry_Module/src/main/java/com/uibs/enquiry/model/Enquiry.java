@@ -32,7 +32,7 @@ public class Enquiry {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private int id;
 	
 	@NotEmpty
 	@Size(min = 3, max=50, message="Enter your full name and must be of min 4 characters" )
@@ -57,11 +57,11 @@ public class Enquiry {
 	
 	@Temporal(TemporalType.TIMESTAMP)
     @Column(name = "submission_date", nullable = false, updatable = false)
-	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="dd-MM-yyyy")
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-dd-MM")
     private Date submissionDate;
 
-	@Column(name = "loan_applied")
-    private boolean loanApplied;
+//	@Column(name = "loan_applied")
+//    private boolean loanApplied;
 	
 //    @OneToOne(cascade = CascadeType.ALL)
 //	private CibilScore cibilScore;
@@ -69,6 +69,5 @@ public class Enquiry {
     @PrePersist
     protected void onCreate() {
         this.submissionDate = new Date(); // Set the date to the current date
-    }
-	
+    }	
 }

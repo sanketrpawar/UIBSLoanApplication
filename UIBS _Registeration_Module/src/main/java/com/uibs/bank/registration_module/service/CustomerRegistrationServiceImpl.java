@@ -2,6 +2,7 @@ package com.uibs.bank.registration_module.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -78,5 +79,12 @@ public class CustomerRegistrationServiceImpl implements CustomerRegistrationServ
 		} else {
 			throw new LoginCredentialsNotValidException("Login Credentials Not Valid");
 		}
+	}
+
+	@Override
+	public Customer getCustomer(int id) {
+
+		Optional<Customer> customer = customerRegistrationRepository.findById(id);
+		return customer.get();
 	}
 }
