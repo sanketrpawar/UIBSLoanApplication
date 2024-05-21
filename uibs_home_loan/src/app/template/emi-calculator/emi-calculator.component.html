@@ -1,0 +1,124 @@
+<form [formGroup]="emiForm" (input)="calculateEMI()">
+    <div style="width: 100%; height: 800px;">
+  
+      <div class="divblock" style="width: 80%; height: 600px;">
+        <div style="width: 50%; height: 600px; float: left;" >
+          <h2 style="text-align: center;">EMI Calculator</h2>
+  
+          <div class="slideContainer" style="width: 140%;">
+            
+              <div class="form-group">
+                <label for="loanAmount" class="md-mb-5">Loan Amount</label> 
+                <div class="amount-inp-loan fw-700 line-h-23">
+                 
+                  <input type="text" id="loanAmount" value=" ₹ {{ emiForm.get('loanAmount').value }}" class="noborder bg-transparent fw-700 line-h-23 ">
+                </div>
+                 
+                <mat-slider min="100000" max="30000000" step="100000">
+                  <input matSliderThumb id="loanAmount"  formControlName="loanAmount">
+                </mat-slider>
+              </div>
+           
+                  <!-- <p class="value">Value: <span>{{ sliderFormControl.value }}</span></p> -->
+          
+              <div style="padding-top: 25px;" class="form-group">
+                <label for="interestRate">Illustrative Interest Rate (per annum)  (%):</label>
+          
+                <div class="amount-inp-loan fw-700 line-h-23">
+                  <input type="text"
+                  value=" {{ emiForm.get('interestRate').value }}" class="noborder bg-transparent fw-700 line-h-23 ">
+                  
+                </div>
+                <mat-slider min="1" max="20" step="1" class="mat-slid-2">
+                  <input matSliderThumb id="interestRate"
+                  formControlName="interestRate">
+                </mat-slider>
+              </div>
+  
+  
+              <div style="padding-top: 25px;" class="form-group">
+                <label for="loanTenure">Loan Tenure (in months):</label>
+                  <div class="amount-inp-loan fw-700 line-h-23">
+                      <input type="text"
+                      value=" {{ emiForm.get('loanTenure').value }}" class="noborder bg-transparent fw-700 line-h-23" />
+                  </div>
+                  <mat-slider min="5" max="50" step="5" class="mat-slid-3">
+                    <input matSliderThumb id="loanTenure"
+                    formControlName="loanTenure" >
+                  </mat-slider>
+          
+                </div>
+          </div>
+          
+  
+  
+  
+          <div>
+            <div class="calemi">
+              <button type="submit" class="emibutton">Calculate EMI</button>
+            </div>
+        </div>
+        </div>
+        
+      
+        <div style="width: 50%; height: 600px; float: right">
+          <h2 class="hed2" style="text-align: center;">Pie Chart</h2>
+  
+        <!-- <div class="paichartdiv" *ngIf="emiCalculated"> -->
+          <div class="paichartdiv" *ngIf="emiCalculated">
+          <div class="pieCalMain" style="width: 100%; height: 300px;">
+  
+            <div style="width: 35%; height: 300px; float: left;">
+  
+              <div class="pieCal">
+                <span style="  color: rgb(1, 1, 52); font-weight: 500;">Principal loan amount:</span> 
+                <h2 style="color: black; font-weight: bold;">₹ {{ loanAmount }}</h2>
+                  <br>
+                <span style="  color: rgba(5, 118, 27, 0.61); font-weight: 500;">Total interest:</span> 
+                <h2 style="color: black; font-weight: bold;">₹ {{ totalInterest }}</h2>
+                  <br>
+                <span style="  color: rgb(1, 1, 52); font-weight: 500;">Monthly EMI:</span> 
+                <h2 style="color: black; font-weight: bold;">₹ {{ emi.toFixed(2) }}</h2>
+              </div>
+              
+            </div>
+              
+            <div style="width: 65%;height: 300px;  float: right;">
+              <div  class="row">
+                <div class="col-lg-8">
+                  <h2>Pie Chart</h2>
+                    <canvas id="piechart"></canvas>
+                </div>
+              </div>
+            </div>
+                    
+          </div>
+  
+  
+          <div class="monthEmi" style="width: 90%; height: 70px; background-color: #0f5999c4; margin-left: 25px;" >
+            
+            <span>Monthly EMI: <strong style="font-size: 30px;">₹ {{ emi.toFixed(2) }}</strong></span>
+            
+          </div>
+  
+          <div id="applyButton" style="width: 100%; height: 70px;">
+          
+              <!-- <button>Apply for loan</button> -->
+            
+            
+          </div>
+  
+        </div>
+  
+          
+        </div>
+          
+      </div>
+  
+    </div>
+  
+  </form>
+  
+  
+    
+    

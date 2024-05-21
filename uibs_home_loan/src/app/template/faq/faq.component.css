@@ -1,0 +1,65 @@
+/* faq.component.css */
+.faq-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #eee;
+}
+
+.faq-question {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.faq-answer {
+    padding: 10px 15px;
+    display: none;
+}
+
+.faq-question:hover {
+    background-color: #f9f9f9;
+}
+
+.faq-question h3 {
+    margin: 0;
+}
+
+.faq-question i {
+    transition: transform 0.3s ease;
+}
+
+.faq-question.rotated {
+    transform: rotate(180deg);
+}
+
+
+/* faq.component.css */
+.card {
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: #f9f9f9;
+}
+
+.card-header button {
+    width: 100%;
+    text-align: left;
+    color: #333;
+    font-weight: 600;
+}
+
+.card-body {
+    border-top: 1px solid #eee;
+    padding: 15px;
+}
+
+/* faq.component.css */
+.card-header button {
+    text-decoration: none; /* Remove underline */
+}

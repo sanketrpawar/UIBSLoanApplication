@@ -1,0 +1,64 @@
+<!-- @switch (stepperOrientation | async) {
+    @case ('horizontal') {
+      <div>Make your screen smaller to see a vertical stepper</div>
+    }
+    @case ('vertical') {
+      <div>Make your screen larger to see a horizontal stepper</div>
+    }
+  } -->
+
+
+  <!-- <ng-container *ngIf="stepperOrientation | async as orientation">
+    <ng-container [ngSwitch]="orientation">
+      <div *ngSwitchCase="'horizontal'">Make your screen smaller to see a vertical stepper</div>
+      <div *ngSwitchCase="'vertical'">Make your screen larger to see a horizontal stepper</div>
+    </ng-container>
+  </ng-container> -->
+
+<mat-stepper class="example-stepper" [orientation]="(stepperOrientation | async)!" labelPosition="bottom">
+  
+    <mat-step [stepControl]="firstFormGroup" label="Details">
+      <app-customer-details></app-customer-details>
+    </mat-step>
+  
+    <mat-step [stepControl]="secondFormGroup" label="Address">
+      <app-address-details></app-address-details>
+    </mat-step>
+  
+    <mat-step [stepControl]="thirdFormGroup" label="Education">
+      <app-education-details></app-education-details>
+    </mat-step>
+  
+    <mat-step [stepControl]="forthFormGroup" label="Profession">
+      <app-profession-details></app-profession-details>
+    </mat-step>
+  
+    <mat-step [stepControl]="fifthFormGroup" label="Mortgage">
+      <app-mortgage-details></app-mortgage-details>
+    </mat-step>
+  
+    <mat-step [stepControl]="sixthFormGroup" label="Account Details">
+      <app-customer-account-details></app-customer-account-details>
+    </mat-step>
+  
+    <mat-step [stepControl]="seventhFormGroup" label="Previous Loan">
+      <app-previous-loan-details></app-previous-loan-details>
+    </mat-step>
+  
+    <mat-step [stepControl]="eightFormGroup" label="Property Details">
+      <app-property-details></app-property-details>
+    </mat-step>
+  
+    <mat-step [stepControl]="ninthFormGroup" label="Customer Documents Upload">
+      <!-- <app-all-personal-documents-details></app-all-personal-documents-details> -->
+      <app-all-documents-upload></app-all-documents-upload>
+    </mat-step>
+    
+    <!-- <mat-step [stepControl]="tenthFormGroup">
+      <ng-template matStepLabel>Done</ng-template>
+      <h2>Successfully Submit.</h2>
+      <div>
+        <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+      </div>
+    </mat-step> -->
+  </mat-stepper>

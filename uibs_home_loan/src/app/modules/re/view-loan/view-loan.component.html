@@ -1,0 +1,27 @@
+<div class="alert alert-success" role="alert" *ngIf="msg">
+    {{msg}}
+  </div>
+
+<table class="tbl">
+    <tr>
+        <th>APP NO</th>
+        <th>NAME</th>
+        <th>CONTACT</th>
+        <th>EMAIL</th>
+        <th>PANCARD NO</th>
+        <th>ACTION</th>
+    </tr>
+
+    <tr *ngFor="let l of loans">
+        <td>{{l.applicationNo}}</td>
+        <td>{{l.customerDetails.customerName}}</td>
+        <td>{{l.customerDetails.mobileNo}}</td>
+        <td>{{l.customerDetails.email}}</td>
+        <td>{{l.customerDetails.pancardNo}}</td>
+        <td>
+            <input type="checkbox" [checked]="isSelected(l.applicationNo)" (change)="toggleSelection(l)">
+        </td>
+    </tr>
+</table>
+<br>
+<button class="btn btn-info" (click)="sendLoanAppToOE()">Forward Loans Operational Executive</button>

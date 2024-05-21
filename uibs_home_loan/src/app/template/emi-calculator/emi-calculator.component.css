@@ -1,0 +1,253 @@
+
+.slideContainer{
+    width :70%;
+    padding-bottom: 10px ;
+    
+    padding-left: 30px;
+    
+  }
+
+  mat-slider::after{
+    content: '₹30Cr';
+    font-size: 1rem;
+    color: black;
+    position: absolute;
+    left: 92%;
+    top:75%
+  }
+
+  mat-slider::before{
+    content: '₹1L';
+    font-size: 1rem;
+    color: black;
+    position: absolute;
+    left: 0%;
+    top:75%
+  }
+
+  .mat-slid-2::before{
+    content: '1%';
+    font-size: 1rem;
+    color: black;
+    position: absolute;
+    left: 0%;
+    top:75%
+  }
+
+  .mat-slid-2::after{
+    content: '20%';
+    font-size: 1rem;
+    color: black;
+    position: absolute;
+    left: 92%;
+    top:75%
+  }
+
+  .mat-slid-3::before{
+    content: '5 Years ';
+    font-size: 1rem;
+    color: black;
+    position: absolute;
+    left: 0%;
+    top:75%
+  }
+
+  .mat-slid-3::after{
+    content: '30 Years';
+    font-size: 1rem;
+    color: black;
+    position: absolute;
+    left: 80%;
+    top:75%
+  }
+
+  mat-slider{
+    -webkit-appearance: none;
+    width: 60%;
+   
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition:  opacity 0.2s;
+    border-radius: 12px;
+    
+  }
+
+  mat-slider:hover {
+    opacity: 1;
+    
+  }
+
+  mat-slider::-webkit-slider-thumb {
+    -webkit-appearance:none;
+    appearance: none;
+    width: 20px;
+    height: 15px;
+  
+    border-radius: 50%;
+  
+    cursor: pointer;
+  }
+
+  mat-slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+  
+    cursor: pointer;
+  }
+
+  .amount-inp-loan{
+    max-width: 200px;
+    padding: 6px 15px;
+    background: #c2c6ce;
+    border-radius: 8px;
+    margin-top: 5px;
+    display: flex;
+    
+  }
+  .noborder {
+    border: 0;
+    
+  }
+
+  .divblock{
+    /* width: 80%; */
+    margin-top: 150px;
+    margin-left: 10%;
+    background-color: rgba(17, 142, 17, 0.247);
+    /* background-color: rgba(101, 101, 101, 0.452); */
+    box-shadow: 0px 1px 10px 0px;
+    padding: 2rem;
+    padding-left: 5rem;
+    margin-bottom: 100px;
+    padding-bottom: 5rem;
+    border-radius: 2rem;
+
+  }
+
+  .calemi{
+    border-radius: 2rem;
+    padding-top: 50px;
+    padding-left: 200px;
+
+  }
+
+  .emibutton{
+    
+   
+    align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+
+  }
+
+.emibutton:focus{
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+.emibutton:hover{
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+.emibutton:active{
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+
+}
+
+.paichartdiv{
+
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 2%;
+    
+    height: 490px;
+    background-color: rgba(26, 167, 218, 0.203);
+    border-radius: 2rem;
+}
+
+.pieCalMain{
+  margin-top: 10px;
+  margin-bottom: 10px;  
+  border-radius: 2rem;
+}
+
+
+.pieCal{
+  margin-top: 40px;
+  padding-left: 20px;
+}
+
+.monthEmi{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-radius: 2rem;
+  color: rgb(1, 1, 52);
+  font-size: 20px;
+  padding-left: 105px;
+  padding-top: 25px;
+}
+
+#applyButton{
+  margin-top: 25px;
+  margin-bottom: 10px;
+  border-radius: 2rem;
+  padding-left: 180px;
+}
+
+#applyButton button{
+  
+  background: #ea6d07;
+  border-radius: 999px;
+  box-shadow: #00000f 0 1px 5px 0px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+
+}
+
+
+
+
+
+
+  
+  

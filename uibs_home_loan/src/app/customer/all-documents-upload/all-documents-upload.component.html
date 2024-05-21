@@ -1,0 +1,77 @@
+<body>
+    <div class="container-fluid px-1 py-5 mx-auto">
+      <div class="row d-flex justify-content-center">
+       <div class="col-xl-11 col-lg-8 col-md-9 col-3 text-center">
+        <div class="card">
+            <form class="form-card" [formGroup]="docUpload" (ngSubmit)="onSubmit()">
+                <h1 class="text-center mb-10">Upload Mentioned Documents</h1>
+                <div class="form-group row justify-content-between text-left">
+                    <div class="col-sm-4 flex-column d-flex">
+                        <label for="adhar">Aadhar:</label>
+                        <input type="file" class="form-control" id="adhar" (change)="onAadhar($event)"  required
+                            accept=".jpg, .jpeg, .png">
+                    </div>
+                    
+                    <div class="col-sm-4 flex-column d-flex">
+                        <label for="incometax">Income Tax Return:</label>
+                        <input type="file" class="form-control" id="incometax" rows="3" (change)="onIncomeTax($event)"
+                            required accept=".jpg, .jpeg, .png">
+                    </div>
+                    <div class="col-sm-4 flex-column d-flex">
+                        <label for="photo">Photo:</label>
+                        <input type="file" class="form-control" id="photo" (change)="onPhoto($event)" required
+                            accept=".jpg, .jpeg, .png">
+                    </div>
+                </div>
+                <div class="form-group row justify-content-between text-left">
+                    
+                    <div class="col-sm-4 flex-column d-flex">
+                        <label for="signature">Signature:</label>
+                        <input type="file" class="form-control" id="signature" (change)="onSignature($event)" required
+                            accept=".jpg, .jpeg, .png">
+                    </div>
+                    <div class="col-sm-4 flex-column d-flex">
+                        <label for="thumb">Thumb:</label>
+                        <input type="file" class="form-control" id="thumb" (change)="onThumb($event)" required
+                            accept=".jpg, .jpeg, .png">
+                    </div>
+                    <div class="col-sm-4 flex-column d-flex">
+                        <label for="address">Address Proof:</label>
+                        <input type="file" class="form-control" id="address"  (change)="onAddressProof($event)"
+                            required accept=".jpg, .jpeg, .png">
+                    </div>
+                </div>
+                <div class="form-group row justify-content-center text-left">
+                    <div class="col-sm-4 flex-column d-flex">
+                        <label for="pancard">pancard:</label>
+                        <input type="file" class="form-control" id="pancard" (change)="onPancard($event)"
+                            required accept=".jpg, .jpeg, .png">
+                    </div>
+                    <div class="col-sm-4 flex-column d-flex">
+                        <label for="bcheck">Bank Check:</label>
+                        <input type="file" class="form-control" id="bcheck" (change)="onBankCheck($event)"
+                            required accept=".jpg, .jpeg, .png">
+                    </div>
+                    <div class="col-sm-4 flex-column d-flex">
+                        <label for="bstatement">pancard:</label>
+                        <input type="file" class="form-control" id="bstatement" (change)="onBankStatement($event)"
+                            required accept=".jpg, .jpeg, .png">
+                    </div>
+                </div>
+                <div class="col-sm-4 flex-column d-flex">
+                    <label class="form-control-label px-3" for="pdata">Personal Data: <span class="text-danger"> *</span></label>
+                    <input formControlName="personalData" class="form-control" id="pdata" placeholder="enter personal data">
+                </div> 
+
+                <div class="form-group">
+                    <button mat-button matStepperPrevious class="btn-block btn-primary" color="primary">Back</button>
+                    <button mat-raised-button matStepperNext class="btn-block btn btn-success">Submit</button>
+                </div>
+
+            </form>
+           
+        </div>
+    </div>
+</div>
+</div>
+</body>

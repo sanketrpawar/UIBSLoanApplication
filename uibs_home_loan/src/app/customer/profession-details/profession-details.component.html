@@ -1,0 +1,55 @@
+<body>
+    <div class="container-fluid px-1 py-5 mx-auto">
+      <div class="row d-flex justify-content-center">
+       <div class="col-xl-11 col-lg-8 col-md-9 col-3 text-center">
+        <div class="card">
+  <form class="form-card" [formGroup]="profession" (ngSubmit)="onSubmit()">
+  <h1 class="text-center mb-10">Fill out your Professional Details</h1>
+        
+  <div class="form-group row justify-content-between text-left">
+    <div class="col-sm-4 flex-column d-flex">
+                <mat-label>Enter Your profession Type</mat-label>
+                <input matInput formControlName="professionType" placeholder="Enter your profession Type">
+    </div>
+            
+    <div class="col-sm-4 flex-column d-flex">
+                <mat-label>Enter your Salary</mat-label>
+                <input matInput formControlName="professionSalary" placeholder="Enter your salary">
+              </div>
+           
+              <div class="col-sm-4 flex-column d-flex">
+                <mat-label>Enter your Salary Type</mat-label>
+                <input matInput formControlName="professionSalaryType" placeholder="enter your Salary Type">
+              </div>
+    </div>
+  
+    <div class="form-group row justify-content-center text-left">
+      <div class="col-sm-4 flex-column d-flex">
+              
+                <mat-label>Enter your working period</mat-label>
+                <input matInput formControlName="professionWorkingPeriod" placeholder="enter your working period">
+              
+      </div>
+      <div class="col-sm-4 flex-column d-flex">
+              
+                <mat-label>Enter your designation</mat-label>
+                <input matInput formControlName="professionDesignation" placeholder="enter your designation">
+              
+      </div> 
+  
+      <div class="col-sm-4 flex-column d-flex">
+              
+        <mat-label for="salary">Upload your salary slip</mat-label>
+        <input type="file" id="salary" (change)="onSalary($event)" required accept=".jpg, .jpeg, .png">
+        </div>
+      
+  </div> 
+      
+              
+      
+        <div>
+            <button mat-button class="btn-block btn-primary" color="primary" matStepperPrevious>Back</button>
+            <button mat-raised-button class="btn-block btn-primary" color="primary" matStepperNext>Next</button>
+        </div>
+       
+  </form>

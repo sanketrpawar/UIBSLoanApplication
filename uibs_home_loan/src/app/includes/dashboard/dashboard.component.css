@@ -1,0 +1,10 @@
+.row1{
+    display: flex;
+    gap: 2%;
+}
+.col1{
+    width: 25%;
+}
+.col2{
+    width: 75%;
+}

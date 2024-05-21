@@ -1,0 +1,16 @@
+<div class="sidebar">
+    <p> User : <b>{{userType}}</b></p>
+
+    <div *ngFor="let btn of options[0][userType]">
+
+        <button class="btn btn-info" [routerLink]="[userType,btn.link]">{{btn.label}}</button>
+
+    </div>
+
+
+    <!-- <div class="col-9">
+         <!-- {{options | json}} <br><hr> -->
+    <!-- {{options [0] ['re'] | json}} 
+       
+    </div> -->
+</div>

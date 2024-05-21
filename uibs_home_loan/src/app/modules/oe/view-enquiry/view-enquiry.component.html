@@ -1,0 +1,22 @@
+<h3>Inquiry List</h3>
+
+<table class="tbl">
+  <tr>
+    <th>NAME</th>
+    <th>EMAIL</th>
+    <th>CONTACT</th>
+    <th>PANCARD NO</th>
+    <th>REMARK</th>
+    <th>SUBMISSION DATE</th>
+
+  </tr>
+  <tr *ngFor="let e of enquiry">
+    <td>{{e.enquiryName}}</td>
+    <td>{{e.email}}</td>
+    <td>{{e.mobileNo}}</td>
+    <td>{{e.pancardNo}}</td>
+    <td>{{e.remark}}</td>
+    <td>{{e.submissionDate}}</td>
+    
+  </tr>
+</table>

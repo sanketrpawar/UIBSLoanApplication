@@ -1,0 +1,48 @@
+<body>
+    <div class="container-fluid px-1 py-5 mx-auto">
+      <div class="row d-flex justify-content-center">
+       <div class="col-xl-11 col-lg-8 col-md-9 col-3 text-center">
+        <div class="card">
+  <form class="form-card" [formGroup]="mortgage" (ngSubmit)="onSubmit()">
+  <h1 class="text-center mb-10">Fill out your mortgage details</h1>
+        
+  <div class="form-group row justify-content-between text-left">
+    <div class="col-sm-4 flex-column d-flex">
+                <label class="form-control-label px-3">Enter Your Property Value <span class="text-danger"> *</span></label>
+                <input formControlName="propertyValue" placeholder="Enter your Property Value">
+          </div>   
+           
+          <div class="col-sm-4 flex-column d-flex">
+                <label class="form-control-label px-3">Enter your Property Type <span class="text-danger"> *</span></label>
+                <input formControlName="propertyType" placeholder="Enter your Property Type">
+            </div>
+            
+            <div class="col-sm-4 flex-column d-flex">
+                <label class="form-control-label px-3">Enter your loan on property <span class="text-danger"> *</span></label>
+                <input formControlName="loanonProperty" placeholder="enter your loan on property">
+            </div>  
+        </div>
+  <div class="form-group row justify-content-between text-left"> 
+  
+    <div class="col-sm-4 flex-column d-flex">
+      <label class="form-control-label px-3" for="pproff">Enter your Property Proff Document <span class="text-danger"> *</span></label>
+      <input type="file" id="pproff" (change)="onPropertyProof($event)" required accept=".jpg, .jpeg, .png" >
+    </div>
+  
+    <div class="col-sm-4 flex-column d-flex">
+      <label class="form-control-label px-3" for="insurance">Enter your Property Insurance Document <span class="text-danger"> *</span></label>
+      <input type="file" id="insurance" (change)="onPropertyInsurance($event)" required accept=".jpg, .jpeg, .png" >
+    </div>
+    
+    </div>
+        <div class="form-group">
+            <button mat-button matStepperPrevious class="btn-block btn-primary" color="primary">Back</button>
+            <button mat-raised-button matStepperNext class="btn-block btn-primary" color="primary">Next</button>
+        </div>
+  </form>
+  </div>
+  </div>
+  </div>
+  </div>
+  </body>
+       

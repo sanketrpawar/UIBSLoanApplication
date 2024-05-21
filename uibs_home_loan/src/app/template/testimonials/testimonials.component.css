@@ -1,0 +1,96 @@
+/* @import '~@fortawesome/fontawesome-free/css/all.css'; */
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  blockquote-footer {
+    margin-top: 10px;
+    text-align: right;
+    font-style: italic;
+  }
+  
+  .card-img-top.rounded-circle {
+    border-radius: 50%;
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    object-fit: cover;
+  }
+
+  .card-img-top.rounded-circle {
+    border-radius: 50%;
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    object-fit: cover;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: auto;
+    background: none;
+  }
+  
+  .carousel-control-prev {
+    left: -40px; /* Adjust as needed */
+  }
+  
+  .carousel-control-next {
+    right: -40px; /* Adjust as needed */
+  }
+  
+  .carousel-control-prev-icon svg,
+  .carousel-control-next-icon svg {
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    fill: #000; /* Adjust color as needed */
+  }
+  
+  .carousel-control-prev-icon {
+    transform: rotate(180deg); /* Rotate the previous arrow icon */
+  }
+  
+  .star-ratings {
+    margin-bottom: 10px;
+  }
+  
+  .star {
+    color: #ccc;
+    font-size: 20px;
+  }
+  
+  .star.filled {
+    color: goldenrod !important; /* Filled star color */
+    font-size: 20px;
+  }
+
+  .star-ratings {
+    margin-bottom: 10px;
+  }
+  
+  .star {
+    font-size: 20px;
+  }
+  
+  .star .fas.fa-star {
+    color: #ccc;
+  }
+  
+  .star .fas.fa-star.filled {
+    color: goldenrod; /* Filled star color */
+  }
+  
+  

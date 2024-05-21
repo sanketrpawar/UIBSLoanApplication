@@ -1,0 +1,22 @@
+.tbl {
+    border-collapse: collapse;
+  
+  }
+  
+  th{
+    background-color: #aaccd8;
+    border: 1px solid black; /* Adjust border color and width as needed */
+    padding: 8px; /* Adjust padding as needed */
+    text-align: center;
+  }
+
+  td{
+    border: 1px solid black; /* Adjust border color and width as needed */
+    padding: 8px; /* Adjust padding as needed */
+    text-align: center;
+  }
+
+  button{
+    border: 1px solid;
+     
+  }

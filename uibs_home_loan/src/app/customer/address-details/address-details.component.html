@@ -1,0 +1,63 @@
+<body>
+    <div class="container-fluid px-1 py-5 mx-auto">
+      <div class="row d-flex justify-content-center">
+       <div class="col-xl-11 col-lg-8 col-md-9 col-3 text-center">
+        <div class="card">
+         <form class="form-card" [formGroup]="customerAddressForm" (ngSubmit)="onSubmit()">
+          <h1 class="text-center mb-10">Address Details Form</h1>
+  
+          <div class="form-group row justify-content-between text-left">
+              <div class="col-sm-4 flex-column d-flex">
+              <label class="form-control-label px-3">Enter Area Name <span class="text-danger"> *</span></label>
+              <input formControlName="areaName" placeholder="Enter Area Name">
+              </div>
+  
+              <div class="col-sm-4 flex-column d-flex">
+              <label class="form-control-label px-3">Enter City Name <span class="text-danger"> *</span></label>
+              <input formControlName="cityName" placeholder="Enter City Name">
+              </div>
+  
+              <div class="col-sm-4 flex-column d-flex">
+              <label class="form-control-label px-3">Enter Distric Name <span class="text-danger"> *</span></label>
+              <input formControlName="district" placeholder="enter District">
+              </div>
+          </div>
+  
+  
+          <div class="form-group row justify-content-between text-left">
+  
+              <div class="col-sm-4 flex-column d-flex">
+              <label class="form-control-label px-3">Enter State Name <span class="text-danger"> *</span></label>
+              <input formControlName="state" placeholder="Enter State Name">
+              </div>
+  
+              <div class="col-sm-4 flex-column d-flex">
+              <label class="form-control-label px-3">Enter Pincode <span class="text-danger"> *</span></label>
+              <input formControlName="pinCode" placeholder="Enter Pincode">
+              </div>
+  
+              <div class="col-sm-4 flex-column d-flex">
+              <label class="form-control-label px-3">Enter House No. <span class="text-danger"> *</span></label>
+              <input formControlName="houseNo" placeholder="enter House No.">
+              </div>
+          </div>
+  
+          <div class="form-group row justify-content-center text-left">
+          <div class="col-sm-4 flex-column d-flex">
+              <label class="form-control-label px-3" >Enter Street Name <span class="text-danger"> *</span></label>
+              <input formControlName="streetName" placeholder="enter street name">
+          </div>
+          </div>
+              <div class="form-group"> 
+              <button mat-button matStepperPrevious class="btn-block btn-primary" color="primary">Back</button>
+              <button mat-raised-button class="btn-block btn-primary" color="primary" mat-button matStepperNext>Next</button>
+              </div>
+          </form>
+          </div>
+          </div>
+          </div>
+          </div>
+          </body>
+  
+      
+  

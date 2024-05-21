@@ -1,0 +1,195 @@
+<div *ngIf="customerLoanData">
+    <!-- <label>Application no.</label>
+    <p>{{customerLoanData.applicationNo}}</p> -->
+    <br>
+
+    <table class="table">
+        <tr>
+            <th class="col-1">APP NO.</th>
+            <td>{{customerData.applicationNo}}</td>
+        </tr>
+
+        <tr>
+            <th class="col-1">NAME</th>
+            <td>{{customerData.customerDetails.customerName}}</td>
+        </tr>
+
+        <tr>
+            <th class="col-2">EMAIL</th>
+            <td>{{customerLoanData.customerDetails.email}}</td>
+        </tr>
+
+        <tr>
+            <th class="col-2">MOB</th>
+            <td>{{customerLoanData.customerDetails.mobileNo}}</td>
+        </tr>
+
+        <tr>
+            <th class="col-2">PANCARD NO.</th>
+            <td>{{customerLoanData.customerDetails.pancardNo}}</td>
+        </tr>
+
+        <tr>
+            <th class="col-2">ADHAAR No.</th>
+            <td>{{customerLoanData.customerDetails.adharNo}}</td>
+        </tr>
+
+        <tr>
+            <th class="col-2">D.O.B</th>
+            <td>{{customerLoanData.customerDetails.customerDOB}}</td>
+        </tr>
+
+        <tr>
+            <th class="col-2">TOTAL LOAN</th>
+            <td>{{customerLoanData.customerDetails.totalLoanRequired}}</td>
+        </tr>
+    </table>
+</div>
+<!-- <button (click)="previousPage()">Prev</button> -->
+
+<router-outlet></router-outlet>
+
+
+
+<div *ngIf="customerLoanData">
+    <!-- <label>Application no.</label>
+    <p>{{customerLoanData.applicationNo}}</p> -->
+    <br>
+
+    <table class="table">
+        <tr>
+            <th class="col-1">APP NO.</th>
+            <td>{{customerLoanData.applicationNo}}</td>
+        </tr>
+
+        <tr>
+            <th class="col-1">NAME</th>
+            <td>{{customerLoanData.customerDetails.customerName}}</td>
+        </tr>
+
+        <tr>
+            <th class="col-2">EMAIL</th>
+            <td>{{customerLoanData.customerDetails.email}}</td>
+        </tr>
+
+        <tr>
+            <th class="col-2">MOB</th>
+            <td>{{customerLoanData.customerDetails.mobileNo}}</td>
+        </tr>
+
+        <tr>
+            <th class="col-2">PANCARD NO.</th>
+            <td>{{customerLoanData.customerDetails.pancardNo}}</td>
+        </tr>
+
+        <tr>
+            <th class="col-2">ADHAAR No.</th>
+            <td>{{customerLoanData.customerDetails.adharNo}}</td>
+        </tr>
+
+        <tr>
+            <th class="col-2">D.O.B</th>
+            <td>{{customerLoanData.customerDetails.customerDOB}}</td>
+        </tr>
+
+        <tr>
+            <th class="col-2">TOTAL LOAN</th>
+            <td>{{customerLoanData.customerDetails.totalLoanRequired}}</td>
+        </tr>
+    </table>
+</div>
+
+<!-- sanction letter -->
+<div #content>
+    <div class="container">
+        <h3 class="text-start ">Sanction Letter</h3>
+        <p>Date {{sanctionedDate | date:'dd/MM/yy'}}</p>
+        <p>Dear, {{customerData.customerDetails.customerName}}
+        </p>
+        <p>Thank you for choosing UIBS Bank. Based on the application and information provided therein, we are
+            pleased to
+            extend an offer to you for a loan as per the preliminary terms and conditions mentioned below:</p>
+        <table class="table table-bordered border-dark" style="width: 60%;">
+            <tr>
+                <th>Application No </th>
+                <td>24486929</td>
+            </tr>
+            <tr>
+                <th>Sanctioned Date </th>
+                <td>{{sanctionedDate | date:'dd/MM/yy'}}</td>
+            </tr>
+            <tr>
+                <th>Applicant Name </th>
+                <td>Venkatesh Patil</td>
+            </tr>
+            <tr>
+                <th>Mobile No </th>
+                <td>8787878787</td>
+            </tr>
+        </table>
+        <br>
+        <table class="table table-bordered border-dark" style="width: 80%;">
+            <tr>
+                <th>Loan Type</th>
+                <td>Home Loan</td>
+            </tr>
+            <tr>
+                <th>Loan Amount Sanctioned: </th>
+                <td>{{sanctionedAmount}}</td>
+            </tr>
+            <tr>
+                <th>Reference Interest Rate:</th>
+                <!-- <td>{{interestValue}}% per annum (Interest Type: Floating rate of interest | Periodicity of Interest
+                    Application: Monthly)</td> -->
+            </tr>
+            <tr>
+                <th>Floating Interest Rate:</th>
+                <td>Reference rate applicable at the time of disbursement - 4.90% per annum</td>
+            </tr>
+            <tr>
+                <th>Loan Tenure (In months):</th>
+                <!-- <td>{{loanTenureValue}}</td> -->
+            </tr>
+            <tr>
+                <th>Total Processing Charges:</th>
+                <td>Up to 0.5% of the total loan amount</td>
+            </tr>
+            <tr>
+                <th>Origination Fee (inclusive of GST):</th>
+                <td>2,500</td>
+            </tr>
+            <tr>
+                <th>Sanction Letter Validity:</th>
+                <td>Up to 0.5% of the total loan amount</td>
+            </tr>
+            <tr>
+                <th>Amount of EMI (INR):</th>
+                <!-- <td>{{totalAmount | currency:'INR'}}</td> -->
+            </tr>
+            <tr>
+                <th>Property Address:</th>
+                <td>{{customerData.propertyDetails.propertyAddress}}</td>
+            </tr>
+            
+        </table>
+       <p>Additional conditions to comply prior to loan disbursal: <br>
+                
+            1. Repayment from ABC Bank <br>
+            2. Legal vetting and search to be conducted <br>
+            3. NOC and offered collateral <br>
+            4. Confirmation form, official ID and copy of ID <br>
+        </p>
+    </div>
+</div>
+
+<br>
+
+<button (click)="generatePDF()" class="btn btn-warning">Download</button>
+
+<!-- <div class="alert alert-success" role="alert" *ngIf="verifyDocxMessage">
+    {{verifyDocxMessage}} 
+    <button class="btn btn-primary ms-4" (click)="forwardtoCM()">Forward to Credit Manager <i [hidden]="hide" class="fa fa-check" aria-hidden="true"></i></button>
+  </div>
+
+<button class="btn btn-success" (click)="checkCibil()">Check Cibil Score</button>
+<button class="btn btn-success ms-5" (click)="verifyDocuments()">Verify Documents</button> -->

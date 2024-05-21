@@ -1,0 +1,190 @@
+<body>
+  <div class="container-fluid px-1 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+      <div class="col-xl-11 col-lg-8 col-md-9 col-3 text-center">
+        <div class="card">
+          <form
+            class="form-card"
+            [formGroup]="customerDetails"
+            (ngSubmit)="onSubmit()"
+          >
+            <h1 class="text-center mb-10">Customer Details Form</h1>
+
+            <div class="form-group row justify-content-between text-left">
+              <div class="col-sm-4 flex-column d-flex">
+                <label class="form-control-label px-3"
+                  >Enter Customer Name
+                  <span class="text-danger"> *</span></label
+                >
+                <input
+                  formControlName="customerName"
+                  placeholder="enter Customer Name"
+                  required
+                />
+              </div>
+
+              <div class="col-sm-4 flex-column d-flex">
+                <label class="form-control-label px-3"
+                  >Enter Customer Mobile No
+                  <span class="text-danger"> *</span></label
+                >
+                <input
+                  formControlName="mobileNo"
+                  placeholder="enter customer mobile number"
+                  required
+                />
+              </div>
+
+              <div class="col-sm-4 flex-column d-flex">
+                <label class="form-control-label px-3"
+                  >Enter Customer Email Id
+                  <span class="text-danger"> *</span></label
+                >
+                <input
+                  formControlName="emailID"
+                  placeholder="enter customer email"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="row justify-content-between text-left">
+              <div class="form-group col-sm-4 flex-column d-flex">
+                <label class="form-control-label px-3"
+                  >Enter Customer Aadhar No
+                  <span class="text-danger"> *</span></label
+                >
+                <input
+                  formControlName="adharNo"
+                  placeholder="enter customer aadhar number number"
+                  required
+                />
+              </div>
+
+              <div class="form-group col-sm-4 flex-column d-flex">
+                <label class="form-control-label px-3"
+                  >Enter Customer PanNo.
+                  <span class="text-danger"> *</span></label
+                >
+                <input
+                  formControlName="pancardNo"
+                  placeholder="enter customer pancard number"
+                  required
+                />
+              </div>
+
+              <div class="form-group col-sm-4 flex-column d-flex">
+                <label class="form-control-label px-3"
+                  >Enter Customer Gender
+                  <span class="text-danger"> *</span></label
+                >
+                <input
+                  formControlName="gender"
+                  placeholder="enter customer gender"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="row justify-content-between text-left">
+              <div class="form-group col-sm-4 flex-column d-flex">
+                <label class="form-control-label px-3"
+                  >Enter Customer DOB <span class="text-danger"> *</span></label
+                >
+                <input
+                  formControlName="customerDOB"
+                  placeholder="enter customer date of birth"
+                  required
+                />
+              </div>
+
+              <div class="form-group col-sm-4 flex-column d-flex">
+                <label class="form-control-label px-3"
+                  >Enter Customer AGE <span class="text-danger"> *</span></label
+                >
+                <input
+                  formControlName="customerAge"
+                  placeholder="enter customer age"
+                  required
+                />
+              </div>
+
+              <div class="form-group col-sm-4 flex-column d-flex">
+                <label class="form-control-label px-3"
+                  >enter your lone type<span class="text-danger">
+                    *</span
+                  ></label
+                >
+                <input
+                  formControlName="loanType"
+                  placeholder="enter your lone type"
+                  required
+                />
+              </div>
+
+              <div class="form-group col-sm-4 flex-column d-flex">
+                <label class="form-control-label px-3"
+                  >Enter Customer Marital Status
+                  <span class="text-danger"> *</span></label
+                >
+                <input
+                  formControlName="maritalStatus"
+                  placeholder="enter customer marital Status"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="row justify-content-between text-left">
+              <div class="form-group col-sm-4 flex-column d-flex">
+                <label class="form-control-label px-3"
+                  >Enter Customer status code
+                  <span class="text-danger"> *</span></label
+                >
+                <input
+                  formControlName="statusCode"
+                  placeholder="enter customer status Code"
+                  required
+                />
+              </div>
+
+              <div class="form-group col-sm-4 flex-column d-flex">
+                <label class="form-control-label px-3"
+                  >Enter Customer Total Loan Required
+                  <span class="text-danger"> *</span></label
+                >
+                <input
+                  formControlName="totalLoanRequired"
+                  placeholder="enter total loan required"
+                  required
+                />
+              </div>
+
+              <!-- <div class="form-group col-sm-4 flex-column d-flex">
+                    <label class="form-control-label px-3">Enter Customer Cibil Score <span class="text-danger"> *</span></label>
+                    <input formControlName="cibilScore" placeholder="enter cibil score" required>
+                </div> -->
+            </div>
+            <div class="form-group">
+              <button
+                mat-raised-button
+                class="btn-block btn-primary"
+                color="primary"
+                mat-button
+                matStepperNext
+                [disabled]="customerDetails.invalid"
+              >
+                Next
+              </button>
+              <!-- <button class="btn" color="primary" >Next</button> -->
+            </div>
+
+            <!-- <div class="row justify-content-end">
+            <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">Request a demo</button> </div>
+        </div> -->
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

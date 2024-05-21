@@ -1,0 +1,56 @@
+<body>
+    <div class="container-fluid px-1 py-5 mx-auto">
+      <div class="row d-flex justify-content-center">
+       <div class="col-xl-11 col-lg-8 col-md-9 col-3 text-center">
+        <div class="card">
+  <form class="form-card" [formGroup]="propertyDetails" (ngSubmit)="onSubmit()">
+      <h1 class="text-center mb-10">Property Details</h1>
+      
+      <div class="form-group row justify-content-between text-left">
+        <div class="col-sm-4 flex-column d-flex">
+           
+              <label>Enter Your property Area</label>
+              <input formControlName="propertyArea" placeholder="Enter your property Area">
+           
+        </div>
+         
+        <div class="col-sm-4 flex-column d-flex">
+            
+              <label>Enter your construction Area</label>
+              <input formControlName="constructionArea" placeholder="Enter your construction Area">
+            
+        </div>
+  
+        <div class="col-sm-4 flex-column d-flex">
+            
+              <label>Enter your property Price</label>
+              <input formControlName="propertyPrice" placeholder="enter property Price">
+            
+        </div>
+     </div>
+     <div class="form-group row justify-content-center text-left">
+     <div class="col-sm-4 flex-column d-flex">
+            
+              <label>Enter your construction Price</label>
+              <input formControlName="constructionPrice" placeholder="enter construction Price">
+            
+    </div>
+            <div class="col-sm-4 flex-column d-flex">
+            
+              <label>Enter your property Address</label>
+              <input formControlName="propertyAddress" placeholder="enter property Address">
+            
+            </div>
+      
+    </div>
+    <div>
+          <button mat-button matStepperPrevious class="btn-block btn-primary" color="primary">Back</button>
+          <button mat-raised-button matStepperNext class="btn-block btn-primary" color="primary">Next</button>
+      </div>
+  
+  </form>
+  </div>
+  </div>
+  </div>
+  </div>
+  </body>

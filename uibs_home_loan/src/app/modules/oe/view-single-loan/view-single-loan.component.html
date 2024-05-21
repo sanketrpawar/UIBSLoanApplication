@@ -1,0 +1,50 @@
+<div *ngIf="customerLoanData">
+    <!-- <label>Application no.</label>
+    <p>{{customerLoanData.applicationNo}}</p> -->
+    <br>
+
+    <table class="table">
+        <tr>
+            <th class="col-1">APP NO.</th>
+            <td>{{customerLoanData.applicationNo}}</td>
+        </tr>
+
+        <tr>
+            <th class="col-1">NAME</th>
+            <td>{{customerLoanData.customerDetails.customerName}}</td>
+        </tr>
+
+        <tr>
+            <th class="col-2">EMAIL</th>
+            <td>vyenkteshpatil&#64;gmail.com</td>
+        </tr>
+
+        <tr>
+            <th class="col-2">MOB</th>
+            <td>{{customerLoanData.customerDetails.mobileNo}}</td>
+        </tr>
+
+        <tr>
+            <th class="col-2">PANCARD NO.</th>
+            <td>{{customerLoanData.customerDetails.pancardNo}}</td>
+        </tr>
+
+        <tr>
+            <th class="col-2">ADHAAR No.</th>
+            <td>{{customerLoanData.customerDetails.adharNo}}</td>
+        </tr>
+
+        <tr>
+            <th class="col-2">D.O.B</th>
+            <td>{{customerLoanData.customerDetails.customerDOB}}</td>
+        </tr>
+
+        <tr>
+            <th class="col-2">TOTAL LOAN</th>
+            <td>{{customerLoanData.customerDetails.totalLoanRequired}}</td>
+        </tr>
+    </table>
+</div>
+<!-- <button (click)="previousPage()">Prev</button> -->
+
+<router-outlet></router-outlet>

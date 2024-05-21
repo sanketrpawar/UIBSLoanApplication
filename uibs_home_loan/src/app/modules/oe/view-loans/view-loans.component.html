@@ -1,0 +1,41 @@
+<div class="alert alert-success" role="alert" *ngIf="msg">
+    {{msg}}
+  </div>
+
+<h3>Loans</h3>
+
+<table class="tbl" [hidden]="hide">
+    <tr>
+        <th>APP NO</th>
+        <th>NAME</th>
+        <th>CONTACT</th>
+        <th>EMAIL</th>
+        <th>PANCARD NO</th>
+        <th>ACTION</th>
+        <th>SELECT</th>
+    </tr>
+
+    <tr *ngFor="let l of loans">
+        <td>{{l.applicationNo}}</td>
+        <td>{{l.customerDetails.customerName}}</td>
+        <td>{{l.customerDetails.mobileNo}}</td>
+        <td>{{l.customerDetails.email}}</td>
+        <td>{{l.customerDetails.pancardNo}}</td>
+        <td>
+            <button class="btn btn-info" routerLink="view_single_loan" (click)="viewDetails(l.applicationNo)" >view details</button>
+        </td>
+        <td>
+      <input type="checkbox" [checked]="isSelected(l.id)" (change)="toggleSelection(l)">
+
+    </td>
+    </tr>
+</table>
+
+<br>
+
+
+<router-outlet></router-outlet>
+
+<br>
+
+<button class="btn btn-info">Forward to Credit Manager</button>

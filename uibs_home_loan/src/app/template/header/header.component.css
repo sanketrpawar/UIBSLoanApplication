@@ -1,0 +1,107 @@
+/* .cyan-text {
+    color: #264550;
+}
+
+.bg-image {
+    background-image: url('/assets/images/business1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0px; 
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 0; 
+    height: 70vh; 
+    background-position: center top;
+    padding-left: 10px;
+    background-position-y: bottom;
+    overflow: hidden;
+    display: block;
+}
+
+
+
+   */
+   .bcontainer{
+    position: relative;
+    background-color: red;
+    margin-top: 20px;
+   margin-left: 20px;
+    margin-right: 20px;
+}
+
+.inner-container{
+    position: absolute;
+    margin-left: 8.7%;
+    width:80%;
+}
+
+.upperNavBar{
+    background-color: #264550;
+    height: 25px;
+    overflow: hidden;
+    display: block;
+    opacity: 0.7;
+}  
+
+.lowerNavBar{
+    background-color: white;
+    height: 65px;
+    opacity: 0.9;
+    display: flex;
+    justify-content: left;
+}
+
+.mainImage{
+    background-image: url(/assets/images/image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh;
+}
+/* img{
+    top: 0;
+    position: relative;
+    height: 80vh;
+    width: 100%;
+
+    margin-left: auto;
+} */
+
+/* .logo{
+    margin-left: 1px;
+
+} */
+
+/* .container-fluid{
+    margin-left: 325px;
+} */
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
